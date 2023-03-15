@@ -1,12 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Anton|Hind+Madurai" rel="stylesheet">
+    <title>앤티앤스 프레즐 코리아(@auntieannes_korea)</title>
+
+    <style>
+        .header {
+            height: 80px;
+            background-color: white;
+            border-bottom: 1px solid slategray;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            overflow: hidden;
+
+        }
+
+        #lg1 {
+            margin: 21px;
+            float: left;
+        }
+
+        #lg2 {
+            border-left: 1px solid black;
+            padding-left: 40px;
+            margin: 20px;
+            float: left;
+        }
+
+        #lg3 {
+            margin: 30px;
+            float: right;
+        }
+
+        #searchbox {
+
+            margin-top: 30px;
+            margin-left: 100px;
+            float: left;
+
+        }
+
+        .content {
+            margin: 0 auto;
+            height: 1300px;
+            width: 700px;
+            margin-top : 150px;
+            border-left : 1px solid black; 
+            border-right : 1px solid black; 
+            border-top : 1px solid black; 
+            font-family: 'Hind Madurai', sans-serif;
+            font-weight: bold;
+        }
+        #userimg {
+          border-radius: 100px;
+          width: 50px;
+          height: 50px;
+          border : 2px solid red;
+          margin : 10px;
+          float:left;
+        }
+        .user {
+           
+           font-size: 20px;
+           float:left;
+        }
+        #userphoto {
+            width:100%;
+        }
+        #instaicon {
+            width:99%;
+        }
+        .like {
+           margin-left : 10px;
+        }
+        .comment {
+            margin-left: 10px;
+            font-size: 13px;
+        }
+        #commentin{
+            border : none;
+            width: 80%;
+            height : 40px;
+            font-size : 15px;
+            margin-left : 10px;
+        }
+      
+        #commentin::-webkit-input-placeholder {
+            
+            font-size : 15px;
+        }
+        #menuimg {
+          
+            width:50px;
+            height:40px;
+            margin-left : 10px;
+           
+        }
+        .comment2 {
+            width: 99%;
+            margin : 20px;
+            float: left;
+           
+        }
+        
+    </style>
 </head>
+
 <body>
-  <p>Hello, World!</p>
+    <div class="header">
+
+        <img id="lg1" src="instalogo1.PNG">
+        <img id="lg2" src="instalogo2.PNG">
+        <div id="searchbox">
+            <input type="search" placeholder="검색">
+        </div>
+        <img id="lg3" src="instalogo3.PNG">
+    </div>
+    <div class="content">
+        <img id="userimg" src="https://scontent-icn1-1.cdninstagram.com/vp/deee301bbe70f8334023e985bfc06839/5BE2DCC7/t51.2885-19/s150x150/33816580_1958109254500332_8551124979750535168_n.jpg">
+        <p class = "user">  j_jheeeee</p>
+        <img id="userphoto" src="userimg1.PNG">
+        <img id="instaicon" src="instaicon.PNG">
+        <p class = "like">좋아요 29개</p>
+        <div class="comment">
+        <p>j_jheeeee 제목 내용 </p>
+        <p style="color:slategray">댓글 6개 모두 보기</p>
+        <p>j_jheeeee  안녕하세요 반갑습니다.</p>
+        <p>kj_104  반가워요 </p>
+        <p>j_jheeeee  잘지내세요 ~</p>
+        <p style="font-size:10px; color:slategray">13시간 전 </p>
+  
+    </div>
+    <div class="comment2">
+    <input id="commentin" type="text" placeholder="  댓글 달기..."> 
+    <img id= "menuimg" src="menuimg.PNG">
+</div>
+    </div>
+
 </body>
+
 </html>
