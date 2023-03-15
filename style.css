@@ -1,6 +1,9 @@
 <head>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
+hr {color:sienna;}
+p {margin-left:20px;}
+body {background-image:url("../images/back40.gif");}
 
 /* common */
 * {
