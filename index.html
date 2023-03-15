@@ -1,12 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+  <meta charset="utf-8">
+  <title>Instagram</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <p>Hello, World!</p>
+
+  <!-- global header -->
+  <div class="gb-header">
+    <div class="wrap">
+      <div class="logo">
+        <a href="./index.html"><img src="./images/logo.png" alt=""></a>
+      </div>
+      <div class="search">
+        <input type="text" name="search" value="">
+      </div>
+      <ul class="menu">
+        <li><a href="#"><img src="./images/menu01.png" alt=""></a></li>
+        <li><a href="#"><img src="./images/menu02.png" alt=""></a></li>
+        <li><a href="#"><img src="./images/menu03.png" alt=""></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- global header -->
+
+  <!-- post-container -->
+  <div class="post-container">
+    <div class="wrap">
+
+      <div class="post">
+        <div class="post-header">
+          <a href="#" class="profile"><img src="./images/profile.jpg" alt=""></a>
+          <a href="#">Instagram</a>
+        </div>
+        <div class="thumbnail">
+          <img src="./images/thumbnail.jpg" alt="">
+        </div>
+        <div class="post-footer">
+          <ul class="btn-container">
+            <li><a href="#"><img src="./images/btn-like.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/btn-comment.png" alt=""></a></li>
+          </ul>
+          <div class="like-container">
+            <a href="#">좋아요 123,456,789개</a>
+          </div>
+          <div class="text-container">
+            <a href="#">Instagram</a>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </div>
+          <div class="time-container">13분 전</div>
+          <div class="comment-container">
+            <textarea name="comment" placeholder="댓글 달기..."></textarea>
+            <a href="#"><img src="./images/btn-opt.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- post-container -->
+
 </body>
 </html>
