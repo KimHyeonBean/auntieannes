@@ -249,12 +249,14 @@ label.right {
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
           </div>
           <div class="time-container">13분 전</div>
+	  <div class="comment-container">
+            <textarea name="comment" placeholder="댓글 달기..."></textarea>
           </div>
         </div>
       </div>
+  <!-- post-container -->
 
   <!-- post-container -->
- <!-- post-container -->
   <div class="post-container">
     <div class="wrap">
 
@@ -264,31 +266,228 @@ label.right {
           <a href="#">auntieannes_korea</a>
         </div>
         <div class="thumbnail">
-          <img src="./목업용1_p1.png" alt="">
+          <style>
+* {margin:0;padding:0;box-sizing:border-box;}
+ul, li {list-style:none;}
+
+[name="slide"] {display:none;}
+.slidebox {max-width:600px;width:100%;margin:0 auto;text-align:center;}
+.slidebox img {max-width:100%;}
+.slidebox .slidelist {
+	white-space:nowrap;
+	font-size:0;
+	overflow:hidden;
+}
+.slidebox .slideitem {
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	width:100%;
+	transition:all .35s;
+}
+.slidebox .slideitem label {
+	position:absolute;
+	z-index:1;
+	top:50%;
+	transform:translateY(-50%);
+	padding:20px;
+	border-radius:50%;
+	cursor:pointer;
+}
+label.left {
+	left:20px;
+	background-color:#5F5F5F;
+	background-image:url('./left-arrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+label.right {
+	right:20px;
+	background-color:#5F5F5F;
+	background-image:url('./right-arrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+
+
+
+/* 페이징 스타일 */
+.paginglist {text-align:center;padding:30px 0;}
+.paginglist > li {display:inline-block;vertical-align:middle;margin:0 10px;}
+.paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
+.paginglist > li:hover > label {background:#333;}
+
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 20s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 20s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 20s infinite;}
+[id="slide05"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide05 20s infinite;}
+[id="slide06"]:checked ~ .slidelist .slideitem {transform:translateX(-500%);animation:slide06 20s infinite;}
+
+@keyframes slide01 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:-300%;}
+	98% {left:-300%;}
+	100% {left:0%;}
+}
+@keyframes slide02 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide03 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide04 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide05 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide06 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+</style>
+
+<div class="slidebox">
+	<input type="radio" name="slide" id="slide01" checked>
+	<input type="radio" name="slide" id="slide02">
+	<input type="radio" name="slide" id="slide03">
+	<input type="radio" name="slide" id="slide04">
+	<input type="radio" name="slide" id="slide05">
+	<input type="radio" name="slide" id="slide06">
+	<ul class="slidelist">
+		<li class="slideitem">
+			<div>
+				<label for="slide01" class="left"></label>
+				<label for="slide02" class="right"></label>
+				<a><img src="./목업용1_p2.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide01" class="left"></label>
+				<label for="slide03" class="right"></label>
+				<a><img src="./1_p7.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide02" class="left"></label>
+				<label for="slide04" class="right"></label>
+				<a><img src="./1_p8.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide03" class="left"></label>
+				<label for="slide05" class="right"></label>
+				<a><img src="./1_p9.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide04" class="left"></label>
+				<label for="slide06" class="right"></label>
+				<a><img src="./1_p10.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide05" class="left"></label>
+				<label for="slide06" class="right"></label>
+				<a><img src="./1_p11.png"></a>
+			</div>
+		</li>
+	</ul>
+	<!-- <ul class="paginglist">
+		<li>
+			<label for="slide01"></label>
+		</li>
+		<li>
+			<label for="slide02"></label>
+		</li>
+		<li>
+			<label for="slide03"></label>
+		</li>
+		<li>
+			<label for="slide04"></label>
+		</li>
+		<li>
+			<label for="slide05"></label>
+		</li>
+		<li>
+			<label for="slide06"></label>
+		</li>
+	</ul> -->
+</div>
         </div>
         <div class="post-footer">
           <ul class="btn-container">
-            <li><a href="#"><img src="./images/btn-like.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/btn-comment.png" alt=""></a></li>
+            <li><a href="#"><img src="./인스타로고6.png" alt=""></a></li>
+            <li><a href="#"><img src="./인스타로고7.png" alt=""></a></li>
           </ul>
           <div class="like-container">
-            <a href="#">좋아요 123,456,789개</a>
+            <a href="#">좋아요 41,203개</a>
           </div>
           <div class="text-container">
             <a href="#">Instagram</a>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
           </div>
           <div class="time-container">13분 전</div>
-          <div class="comment-container">
+	  <div class="comment-container">
             <textarea name="comment" placeholder="댓글 달기..."></textarea>
-            <a href="#"><img src="./images/btn-opt.png" alt=""></a>
           </div>
         </div>
       </div>
-
   <!-- post-container -->
-
- <!-- post-container -->
+	    
+	     <!-- post-container -->
   <div class="post-container">
     <div class="wrap">
 
@@ -298,33 +497,228 @@ label.right {
           <a href="#">auntieannes_korea</a>
         </div>
         <div class="thumbnail">
-          <img src="./목업용1_p1.png" alt="">
+          <style>
+* {margin:0;padding:0;box-sizing:border-box;}
+ul, li {list-style:none;}
+
+[name="slide"] {display:none;}
+.slidebox {max-width:600px;width:100%;margin:0 auto;text-align:center;}
+.slidebox img {max-width:100%;}
+.slidebox .slidelist {
+	white-space:nowrap;
+	font-size:0;
+	overflow:hidden;
+}
+.slidebox .slideitem {
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	width:100%;
+	transition:all .35s;
+}
+.slidebox .slideitem label {
+	position:absolute;
+	z-index:1;
+	top:50%;
+	transform:translateY(-50%);
+	padding:20px;
+	border-radius:50%;
+	cursor:pointer;
+}
+label.left {
+	left:20px;
+	background-color:#5F5F5F;
+	background-image:url('./left-arrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+label.right {
+	right:20px;
+	background-color:#5F5F5F;
+	background-image:url('./right-arrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+
+
+
+/* 페이징 스타일 */
+.paginglist {text-align:center;padding:30px 0;}
+.paginglist > li {display:inline-block;vertical-align:middle;margin:0 10px;}
+.paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
+.paginglist > li:hover > label {background:#333;}
+
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 20s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 20s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 20s infinite;}
+[id="slide05"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide05 20s infinite;}
+[id="slide06"]:checked ~ .slidelist .slideitem {transform:translateX(-500%);animation:slide06 20s infinite;}
+
+@keyframes slide01 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:-300%;}
+	98% {left:-300%;}
+	100% {left:0%;}
+}
+@keyframes slide02 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide03 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide04 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide05 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide06 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+</style>
+
+<div class="slidebox">
+	<input type="radio" name="slide" id="slide01" checked>
+	<input type="radio" name="slide" id="slide02">
+	<input type="radio" name="slide" id="slide03">
+	<input type="radio" name="slide" id="slide04">
+	<input type="radio" name="slide" id="slide05">
+	<input type="radio" name="slide" id="slide06">
+	<ul class="slidelist">
+		<li class="slideitem">
+			<div>
+				<label for="slide01" class="left"></label>
+				<label for="slide02" class="right"></label>
+				<a><img src="./목업용1_p1.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide01" class="left"></label>
+				<label for="slide03" class="right"></label>
+				<a><img src="./1_p2.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide02" class="left"></label>
+				<label for="slide04" class="right"></label>
+				<a><img src="./1_p3.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide03" class="left"></label>
+				<label for="slide05" class="right"></label>
+				<a><img src="./1_p4.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide04" class="left"></label>
+				<label for="slide06" class="right"></label>
+				<a><img src="./1_p5.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide05" class="left"></label>
+				<label for="slide06" class="right"></label>
+				<a><img src="./1_p6.png"></a>
+			</div>
+		</li>
+	</ul>
+	<!-- <ul class="paginglist">
+		<li>
+			<label for="slide01"></label>
+		</li>
+		<li>
+			<label for="slide02"></label>
+		</li>
+		<li>
+			<label for="slide03"></label>
+		</li>
+		<li>
+			<label for="slide04"></label>
+		</li>
+		<li>
+			<label for="slide05"></label>
+		</li>
+		<li>
+			<label for="slide06"></label>
+		</li>
+	</ul> -->
+</div>
         </div>
         <div class="post-footer">
           <ul class="btn-container">
-            <li><a href="#"><img src="./images/btn-like.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/btn-comment.png" alt=""></a></li>
+            <li><a href="#"><img src="./인스타로고6.png" alt=""></a></li>
+            <li><a href="#"><img src="./인스타로고7.png" alt=""></a></li>
           </ul>
           <div class="like-container">
-            <a href="#">좋아요 123,456,789개</a>
+            <a href="#">좋아요 41,203개</a>
           </div>
           <div class="text-container">
             <a href="#">Instagram</a>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
           </div>
           <div class="time-container">13분 전</div>
-          <div class="comment-container">
+	  <div class="comment-container">
             <textarea name="comment" placeholder="댓글 달기..."></textarea>
-            <a href="#"><img src="./images/btn-opt.png" alt=""></a>
           </div>
         </div>
       </div>
-
-    </div>
-  </div>
   <!-- post-container -->
-
- <!-- post-container -->
+	    
+	     <!-- post-container -->
   <div class="post-container">
     <div class="wrap">
 
@@ -334,33 +728,228 @@ label.right {
           <a href="#">auntieannes_korea</a>
         </div>
         <div class="thumbnail">
-          <img src="./목업용1_p1.png" alt="">
+          <style>
+* {margin:0;padding:0;box-sizing:border-box;}
+ul, li {list-style:none;}
+
+[name="slide"] {display:none;}
+.slidebox {max-width:600px;width:100%;margin:0 auto;text-align:center;}
+.slidebox img {max-width:100%;}
+.slidebox .slidelist {
+	white-space:nowrap;
+	font-size:0;
+	overflow:hidden;
+}
+.slidebox .slideitem {
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	width:100%;
+	transition:all .35s;
+}
+.slidebox .slideitem label {
+	position:absolute;
+	z-index:1;
+	top:50%;
+	transform:translateY(-50%);
+	padding:20px;
+	border-radius:50%;
+	cursor:pointer;
+}
+label.left {
+	left:20px;
+	background-color:#5F5F5F;
+	background-image:url('./left-arrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+label.right {
+	right:20px;
+	background-color:#5F5F5F;
+	background-image:url('./right-arrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+
+
+
+/* 페이징 스타일 */
+.paginglist {text-align:center;padding:30px 0;}
+.paginglist > li {display:inline-block;vertical-align:middle;margin:0 10px;}
+.paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
+.paginglist > li:hover > label {background:#333;}
+
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 20s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 20s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 20s infinite;}
+[id="slide05"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide05 20s infinite;}
+[id="slide06"]:checked ~ .slidelist .slideitem {transform:translateX(-500%);animation:slide06 20s infinite;}
+
+@keyframes slide01 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:-300%;}
+	98% {left:-300%;}
+	100% {left:0%;}
+}
+@keyframes slide02 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide03 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide04 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide05 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide06 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+</style>
+
+<div class="slidebox">
+	<input type="radio" name="slide" id="slide01" checked>
+	<input type="radio" name="slide" id="slide02">
+	<input type="radio" name="slide" id="slide03">
+	<input type="radio" name="slide" id="slide04">
+	<input type="radio" name="slide" id="slide05">
+	<input type="radio" name="slide" id="slide06">
+	<ul class="slidelist">
+		<li class="slideitem">
+			<div>
+				<label for="slide01" class="left"></label>
+				<label for="slide02" class="right"></label>
+				<a><img src="./목업용1_p1.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide01" class="left"></label>
+				<label for="slide03" class="right"></label>
+				<a><img src="./1_p2.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide02" class="left"></label>
+				<label for="slide04" class="right"></label>
+				<a><img src="./1_p3.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide03" class="left"></label>
+				<label for="slide05" class="right"></label>
+				<a><img src="./1_p4.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide04" class="left"></label>
+				<label for="slide06" class="right"></label>
+				<a><img src="./1_p5.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide05" class="left"></label>
+				<label for="slide06" class="right"></label>
+				<a><img src="./1_p6.png"></a>
+			</div>
+		</li>
+	</ul>
+	<!-- <ul class="paginglist">
+		<li>
+			<label for="slide01"></label>
+		</li>
+		<li>
+			<label for="slide02"></label>
+		</li>
+		<li>
+			<label for="slide03"></label>
+		</li>
+		<li>
+			<label for="slide04"></label>
+		</li>
+		<li>
+			<label for="slide05"></label>
+		</li>
+		<li>
+			<label for="slide06"></label>
+		</li>
+	</ul> -->
+</div>
         </div>
         <div class="post-footer">
           <ul class="btn-container">
-            <li><a href="#"><img src="./images/btn-like.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/btn-comment.png" alt=""></a></li>
+            <li><a href="#"><img src="./인스타로고6.png" alt=""></a></li>
+            <li><a href="#"><img src="./인스타로고7.png" alt=""></a></li>
           </ul>
           <div class="like-container">
-            <a href="#">좋아요 123,456,789개</a>
+            <a href="#">좋아요 41,203개</a>
           </div>
           <div class="text-container">
             <a href="#">Instagram</a>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
           </div>
           <div class="time-container">13분 전</div>
-          <div class="comment-container">
+	  <div class="comment-container">
             <textarea name="comment" placeholder="댓글 달기..."></textarea>
-            <a href="#"><img src="./images/btn-opt.png" alt=""></a>
           </div>
         </div>
       </div>
-
-    </div>
-  </div>
   <!-- post-container -->
-
- <!-- post-container -->
+	    
+	     <!-- post-container -->
   <div class="post-container">
     <div class="wrap">
 
@@ -370,32 +959,223 @@ label.right {
           <a href="#">auntieannes_korea</a>
         </div>
         <div class="thumbnail">
-          <img src="./목업용1_p1.png" alt="">
+          <style>
+* {margin:0;padding:0;box-sizing:border-box;}
+ul, li {list-style:none;}
+
+[name="slide"] {display:none;}
+.slidebox {max-width:600px;width:100%;margin:0 auto;text-align:center;}
+.slidebox img {max-width:100%;}
+.slidebox .slidelist {
+	white-space:nowrap;
+	font-size:0;
+	overflow:hidden;
+}
+.slidebox .slideitem {
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	width:100%;
+	transition:all .35s;
+}
+.slidebox .slideitem label {
+	position:absolute;
+	z-index:1;
+	top:50%;
+	transform:translateY(-50%);
+	padding:20px;
+	border-radius:50%;
+	cursor:pointer;
+}
+label.left {
+	left:20px;
+	background-color:#5F5F5F;
+	background-image:url('./left-arrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+label.right {
+	right:20px;
+	background-color:#5F5F5F;
+	background-image:url('./right-arrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+
+
+
+/* 페이징 스타일 */
+.paginglist {text-align:center;padding:30px 0;}
+.paginglist > li {display:inline-block;vertical-align:middle;margin:0 10px;}
+.paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
+.paginglist > li:hover > label {background:#333;}
+
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 20s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 20s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 20s infinite;}
+[id="slide05"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide05 20s infinite;}
+[id="slide06"]:checked ~ .slidelist .slideitem {transform:translateX(-500%);animation:slide06 20s infinite;}
+
+@keyframes slide01 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:-300%;}
+	98% {left:-300%;}
+	100% {left:0%;}
+}
+@keyframes slide02 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide03 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide04 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide05 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide06 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+</style>
+
+<div class="slidebox">
+	<input type="radio" name="slide" id="slide01" checked>
+	<input type="radio" name="slide" id="slide02">
+	<input type="radio" name="slide" id="slide03">
+	<input type="radio" name="slide" id="slide04">
+	<input type="radio" name="slide" id="slide05">
+	<input type="radio" name="slide" id="slide06">
+	<ul class="slidelist">
+		<li class="slideitem">
+			<div>
+				<label for="slide01" class="left"></label>
+				<label for="slide02" class="right"></label>
+				<a><img src="./목업용1_p1.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide01" class="left"></label>
+				<label for="slide03" class="right"></label>
+				<a><img src="./1_p2.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide02" class="left"></label>
+				<label for="slide04" class="right"></label>
+				<a><img src="./1_p3.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide03" class="left"></label>
+				<label for="slide05" class="right"></label>
+				<a><img src="./1_p4.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide04" class="left"></label>
+				<label for="slide06" class="right"></label>
+				<a><img src="./1_p5.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide05" class="left"></label>
+				<label for="slide06" class="right"></label>
+				<a><img src="./1_p6.png"></a>
+			</div>
+		</li>
+	</ul>
+	<!-- <ul class="paginglist">
+		<li>
+			<label for="slide01"></label>
+		</li>
+		<li>
+			<label for="slide02"></label>
+		</li>
+		<li>
+			<label for="slide03"></label>
+		</li>
+		<li>
+			<label for="slide04"></label>
+		</li>
+		<li>
+			<label for="slide05"></label>
+		</li>
+		<li>
+			<label for="slide06"></label>
+		</li>
+	</ul> -->
+</div>
         </div>
         <div class="post-footer">
           <ul class="btn-container">
-            <li><a href="#"><img src="./images/btn-like.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/btn-comment.png" alt=""></a></li>
+            <li><a href="#"><img src="./인스타로고6.png" alt=""></a></li>
+            <li><a href="#"><img src="./인스타로고7.png" alt=""></a></li>
           </ul>
           <div class="like-container">
-            <a href="#">좋아요 123,456,789개</a>
+            <a href="#">좋아요 41,203개</a>
           </div>
           <div class="text-container">
             <a href="#">Instagram</a>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
           </div>
           <div class="time-container">13분 전</div>
-          <div class="comment-container">
+	  <div class="comment-container">
             <textarea name="comment" placeholder="댓글 달기..."></textarea>
-            <a href="#"><img src="./images/btn-opt.png" alt=""></a>
           </div>
         </div>
       </div>
-
-    </div>
-  </div>
   <!-- post-container -->
-
-
-</body>
-</html>
