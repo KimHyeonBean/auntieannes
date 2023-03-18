@@ -70,6 +70,7 @@ label.left {
 	background-position:center center;
 	background-size:50%;
 	background-repeat:no-repeat;
+	background-opacity:50%;
 }
 label.right {
 	right:20px;
@@ -78,6 +79,7 @@ label.right {
 	background-position:center center;
 	background-size:50%;
 	background-repeat:no-repeat;
+	background-opacity:50%;
 }
 
 /* 페이징 스타일 */
@@ -90,6 +92,7 @@ label.right {
 [id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 20s infinite;}
 [id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 20s infinite;}
 [id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 20s infinite;}
+[id="slide05"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide05 20s infinite;}
 
 @keyframes slide01 {
 	0% {left:0%;}
@@ -135,6 +138,17 @@ label.right {
 	98% {left:100%;}
 	100% {left:0%;}
 }
+@keyframes slide05 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
 </style>
 
 <div class="slidebox">
@@ -142,6 +156,7 @@ label.right {
 	<input type="radio" name="slide" id="slide02">
 	<input type="radio" name="slide" id="slide03">
 	<input type="radio" name="slide" id="slide04">
+	<input type="radio" name="slide" id="slide05">
 	<ul class="slidelist">
 		<li class="slideitem">
 			<div>
@@ -167,8 +182,15 @@ label.right {
 		<li class="slideitem">
 			<div>
 				<label for="slide03" class="left"></label>
-				<label for="slide01" class="right"></label>
+				<label for="slide05" class="right"></label>
 				<a><img src="./1_p4.png"></a>
+			</div>
+		</li>
+		<li class="slideitem">
+			<div>
+				<label for="slide04" class="left"></label>
+				<label for="slide01" class="right"></label>
+				<a><img src="./1_p5.png"></a>
 			</div>
 		</li>
 	</ul>
@@ -184,6 +206,9 @@ label.right {
 		</li>
 		<li>
 			<label for="slide04"></label>
+		</li>
+		<li>
+			<label for="slide05"></label>
 		</li>
 	</ul> -->
 </div>
