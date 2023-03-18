@@ -43,7 +43,7 @@
         max-width: 100%;
       }
       .jb-a {
-        width: 400px;
+        width: 500px;
         margin: 0px auto;
         position: relative
       }
@@ -53,7 +53,16 @@
         left: 0px;
         display: none;
       }
+      .jb-d {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+      }
       .jb-a:hover .jb-c {
+        display: block;
+      }
+      .jb-c:hover .jb-d {
         display: block;
       }
       .jb-c {
@@ -63,7 +72,17 @@
         opacity: 0;
         transition: opacity 0.5s linear;
       }
+      .jb-d {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 0.5s linear;
+      }
       .jb-a:hover .jb-c {
+        opacity: 1;
+      }
+      .jb-c:hover .jb-d {
         opacity: 1;
       }
     </style>
@@ -72,7 +91,8 @@
     <h1>Hover Effect</h1>
     <div class="jb-a">
       <img src="목업용1_p1.png" alt="" class="jb-b">
-      <img src="아힘들다;....png" alt="" class="jb-c">
+      <img src="1_p2.png" alt="" class="jb-c">
+       <img src="1_p3.png" alt="" class="jb-d">
     </div>
   </body>
         </div>
