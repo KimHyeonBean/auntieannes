@@ -319,14 +319,14 @@ label.right {
 .paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
 .paginglist > li:hover > label {background:#333;}
 
-[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
-[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 20s infinite;}
-[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 20s infinite;}
-[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 20s infinite;}
-[id="slide05"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide05 20s infinite;}
-[id="slide06"]:checked ~ .slidelist .slideitem {transform:translateX(-500%);animation:slide06 20s infinite;}
+[id="slide07"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide07 20s infinite;}
+[id="slide08"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide08 20s infinite;}
+[id="slide09"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide09 20s infinite;}
+[id="slide10"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide10 20s infinite;}
+[id="slide11"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide11 20s infinite;}
+[id="slide12"]:checked ~ .slidelist .slideitem {transform:translateX(-500%);animation:slide12 20s infinite;}
 
-@keyframes slide01 {
+@keyframes slide07 {
 	0% {left:0%;}
 	23% {left:0%;}
 	25% {left:-100%;}
@@ -337,7 +337,7 @@ label.right {
 	98% {left:-300%;}
 	100% {left:0%;}
 }
-@keyframes slide02 {
+@keyframes slide08 {
 	0% {left:0%;}
 	23% {left:0%;}
 	25% {left:-100%;}
@@ -348,7 +348,7 @@ label.right {
 	98% {left:100%;}
 	100% {left:0%;}
 }
-@keyframes slide03 {
+@keyframes slide09 {
 	0% {left:0%;}
 	23% {left:0%;}
 	25% {left:-100%;}
@@ -359,7 +359,7 @@ label.right {
 	98% {left:100%;}
 	100% {left:0%;}
 }
-@keyframes slide04 {
+@keyframes slide10 {
 	0% {left:0%;}
 	23% {left:0%;}
 	25% {left:300%;}
@@ -370,7 +370,7 @@ label.right {
 	98% {left:100%;}
 	100% {left:0%;}
 }
-@keyframes slide05 {
+@keyframes slide11 {
 	0% {left:0%;}
 	23% {left:0%;}
 	25% {left:300%;}
@@ -381,7 +381,7 @@ label.right {
 	98% {left:100%;}
 	100% {left:0%;}
 }
-@keyframes slide06 {
+@keyframes slide12 {
 	0% {left:0%;}
 	23% {left:0%;}
 	25% {left:300%;}
@@ -395,74 +395,74 @@ label.right {
 </style>
 
 <div class="slidebox">
-	<input type="radio" name="slide" id="slide01" checked>
-	<input type="radio" name="slide" id="slide02">
-	<input type="radio" name="slide" id="slide03">
-	<input type="radio" name="slide" id="slide04">
-	<input type="radio" name="slide" id="slide05">
-	<input type="radio" name="slide" id="slide06">
+	<input type="radio" name="slide" id="slide07" checked>
+	<input type="radio" name="slide" id="slide08">
+	<input type="radio" name="slide" id="slide09">
+	<input type="radio" name="slide" id="slide10">
+	<input type="radio" name="slide" id="slide11">
+	<input type="radio" name="slide" id="slide12">
 	<ul class="slidelist">
 		<li class="slideitem">
 			<div>
-				<label for="slide01" class="left"></label>
-				<label for="slide02" class="right"></label>
+				<label for="slide07" class="left"></label>
+				<label for="slide08" class="right"></label>
 				<a><img src="./목업용1_p2.png"></a>
 			</div>
 		</li>
 		<li class="slideitem">
 			<div>
-				<label for="slide01" class="left"></label>
-				<label for="slide03" class="right"></label>
+				<label for="slide07" class="left"></label>
+				<label for="slide09" class="right"></label>
 				<a><img src="./1_p7.png"></a>
 			</div>
 		</li>
 		<li class="slideitem">
 			<div>
-				<label for="slide02" class="left"></label>
-				<label for="slide04" class="right"></label>
+				<label for="slide08" class="left"></label>
+				<label for="slide10" class="right"></label>
 				<a><img src="./1_p8.png"></a>
 			</div>
 		</li>
 		<li class="slideitem">
 			<div>
-				<label for="slide03" class="left"></label>
-				<label for="slide05" class="right"></label>
+				<label for="slide09" class="left"></label>
+				<label for="slide11" class="right"></label>
 				<a><img src="./1_p9.png"></a>
 			</div>
 		</li>
 		<li class="slideitem">
 			<div>
-				<label for="slide04" class="left"></label>
-				<label for="slide06" class="right"></label>
+				<label for="slide10" class="left"></label>
+				<label for="slide12" class="right"></label>
 				<a><img src="./1_p10.png"></a>
 			</div>
 		</li>
 		<li class="slideitem">
 			<div>
-				<label for="slide05" class="left"></label>
-				<label for="slide06" class="right"></label>
+				<label for="slide11" class="left"></label>
+				<label for="slide12" class="right"></label>
 				<a><img src="./1_p11.png"></a>
 			</div>
 		</li>
 	</ul>
 	<!-- <ul class="paginglist">
 		<li>
-			<label for="slide01"></label>
+			<label for="slide07"></label>
 		</li>
 		<li>
-			<label for="slide02"></label>
+			<label for="slide08"></label>
 		</li>
 		<li>
-			<label for="slide03"></label>
+			<label for="slide09"></label>
 		</li>
 		<li>
-			<label for="slide04"></label>
+			<label for="slide10"></label>
 		</li>
 		<li>
-			<label for="slide05"></label>
+			<label for="slide11"></label>
 		</li>
 		<li>
-			<label for="slide06"></label>
+			<label for="slide12"></label>
 		</li>
 	</ul> -->
 </div>
