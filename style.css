@@ -21,8 +21,8 @@ a {
 
 
 
-/* gb-header */
-.gb-header {
+/* header */
+.header {
   position: fixed;
   top: 0;
   z-index: 1;
@@ -31,7 +31,7 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, .0975);
   background-color: #ffffff;
 }
-.gb-header > .wrap {
+.header > .wrap {
   display: flex;
   align-items: center;
   height: 100%;
@@ -39,15 +39,15 @@ a {
   padding: 0 40px;
   margin: 0 auto;
 }
-.gb-header > .wrap > * {
+.header > .wrap > * {
   flex: 1;
 }
 
-.gb-header .logo {
+.header .logo {
   height: 35px;
 }
 
-.gb-header .search > input {
+.header .search > input {
   display: block;
   width: 215px;
   height: 28px;
@@ -60,17 +60,17 @@ a {
   color: #262626;
 }
 
-.gb-header .menu {
+.header .menu {
   list-style: none;
   height: 24px;
   font-size: 0;
   text-align: right;
 }
-.gb-header .menu > li {
+.header .menu > li {
   display: inline-block;
   margin-right: 30px;
 }
-.gb-header .menu > li:last-child {
+.header .menu > li:last-child {
   margin: 0;
 }
 
